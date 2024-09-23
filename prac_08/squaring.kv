@@ -1,0 +1,23 @@
+<SquaringApp>:
+    orientation: 'vertical'  # Top-level layout arranged vertically
+
+    BoxLayout:
+        orientation: 'horizontal'  # Top section arranged horizontally
+
+        TextInput:
+            id: input_number
+            hint_text: 'Enter a number'
+
+        Button:
+            text: 'Square'
+            on_press: app.square_number(input_number.text)  # Pass input value to the handler
+
+    Label:
+        id: output_label
+        text: 'Result will be displayed here'
+        color: (1, 0.75, 0.8, 1)  # Pink color in RGBA
+
+    Label:
+        text: 'Enter a number and press "Square"'
+        size_hint_y: None
+        height: self.minimum_height
